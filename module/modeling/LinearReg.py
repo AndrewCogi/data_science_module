@@ -3,6 +3,15 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn import linear_model
 
+''' LinearReg
+input parameter : scaled_df, target, test_size, shuffle
+scaled_df (type: DataFrame) >> Target of DecisionTree that after Scaling
+target (type: String) >> Feature name of target value
+test_size (type: Float, default: 0.25) >> Specify testset ratio when training_test_split
+shuffle (type: Bool, default: False) >> Specify whether shuffle when training_test_split
+output : Show regression score
+'''
+
 def do_modeling(scaled_df, target, test_size=0.25, shuffle=False):
     # Split dataset (Independent / Target)
     X = scaled_df.drop(columns=[target]).values

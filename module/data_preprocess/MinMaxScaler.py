@@ -2,6 +2,13 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
+''' MinMaxScaler
+input parameter : org_df, target, showPlot
+org_df (type: DataFrame) >> Target of RobustScaling
+target (type: String) >> Feature name of target value
+showPlot (type: bool, default=False) >> Whether to plot the result
+output : Return DataFrame that after RobustScaling. Drawing graph based on whether or not plotting
+'''
 def do_scaling(org_df, target, showPlot=False):
     # Init variables
     scaler = MinMaxScaler()
@@ -12,6 +19,7 @@ def do_scaling(org_df, target, showPlot=False):
     scaled_df = scaler.fit_transform(X_df)
     scaled_df = pd.DataFrame(scaled_df,columns=list(X_df.columns))
 
+    # show plot
     if(showPlot == True):
         import seaborn as sns
         from matplotlib import pyplot as plt

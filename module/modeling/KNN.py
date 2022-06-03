@@ -5,6 +5,16 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import classification_report
 from sklearn.model_selection import cross_val_score
 
+''' KNN
+input parameter : scaled_df, target, test_size, shuffle, k
+scaled_df (type: DataFrame) >> Target of DecisionTree that after Scaling
+target (type: String) >> Feature name of target value
+test_size (type: Float, default: 0.25) >> Specify testset ratio when training_test_split
+shuffle (type: Bool, default: False) >> Specify whether shuffle when training_test_split
+k (type: Int, default: 3) >> Specify a value for n_neighbors in KNN
+output : Show KNN score evaluated by cross_validation=5 and confision matrix
+'''
+
 def do_modeling(scaled_df, target, test_size=0.25, shuffle=False, k=3):
     # Split dataset (Independent / Target)
     X = scaled_df.drop(columns=[target]).values

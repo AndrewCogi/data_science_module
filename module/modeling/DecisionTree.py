@@ -5,6 +5,16 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
 
+''' DecisionTree
+input parameter : scaled_df, target, test_size, shuffle, criterion, showPlot
+scaled_df (type: DataFrame) >> Target of DecisionTree that after Scaling
+target (type: String) >> Feature name of target value
+test_size (type: Float, default: 0.25) >> Specify testset ratio when training_test_split
+shuffle (type: Bool, default: False) >> Specify whether shuffle when training_test_split
+criterion (type: String, default: 'gini') >> Determine the type of criterion used in Decision Tree
+showPlot (type: bool, default=False) >> Whether to plot the result
+output : Show DecisionTree score and confision matrix. Drawing tree based on whether or not plotting'''
+
 def do_modeling(scaled_df, target, test_size=0.25, shuffle=False, criterion='gini', showPlot=False):
     # Split dataset (Independent / Target)
     X = scaled_df.drop(columns=[target]).values
@@ -18,6 +28,7 @@ def do_modeling(scaled_df, target, test_size=0.25, shuffle=False, criterion='gin
     tr.fit(X_train,y_train)
     y_pred_tr = tr.predict(X_test)
     
+    # show plot
     if showPlot == True:
         import matplotlib.pyplot as plt
         from sklearn.tree import plot_tree
