@@ -6,7 +6,7 @@ It focused on easy and fast use by modularization from data preprocessing to mod
 * #### LabelEncoder
   * input parameter : org_df
    * org_df (type: DataFrame) >> Target of LabelEncoding
-    output : Return DataFrame after LabelEncoding
+  * output : Return DataFrame after LabelEncoding
 
 * #### MinMaxScaler
 
@@ -14,7 +14,7 @@ It focused on easy and fast use by modularization from data preprocessing to mod
    * org_df (type: DataFrame) >> Target of MinMaxScaling
    * target (type: String) >> Feature name of target value
    * showPlot (type: bool, default=False) >> Whether to plot the result
-    output : Return DataFrame that after MinMaxScaling. Drawing graph based on whether or not plotting
+  * output : Return DataFrame that after MinMaxScaling. Drawing graph based on whether or not plotting
 
 * #### RobustScaler
 
@@ -22,7 +22,7 @@ It focused on easy and fast use by modularization from data preprocessing to mod
    * org_df (type: DataFrame) >> Target of RobustScaling
    * target (type: String) >> Feature name of target value
    * showPlot (type: bool, default=False) >> Whether to plot the result
-    output : Return DataFrame that after RobustScaling. Drawing graph based on whether or not plotting
+  * output : Return DataFrame that after RobustScaling. Drawing graph based on whether or not plotting
 
 * #### StandardScaler
 
@@ -30,7 +30,7 @@ It focused on easy and fast use by modularization from data preprocessing to mod
    * org_df (type: DataFrame) >> Target of StandardScaling
    * target (type: String) >> Feature name of target value
    * showPlot (type: Bool, default=False) >> Whether to plot the result
-    output : Return DataFrame that after StandardScaling. Drawing graph based on whether or not plotting
+  * output : Return DataFrame that after StandardScaling. Drawing graph based on whether or not plotting
 
 * #### DecisionTree
 
@@ -41,7 +41,7 @@ It focused on easy and fast use by modularization from data preprocessing to mod
    * shuffle (type: Bool, default: False) >> Specify whether shuffle when training_test_split
    * criterion (type: String, default: 'gini') >> Determine the type of criterion used in Decision Tree
    * showPlot (type: bool, default=False) >> Whether to plot the result
-    output : Show DecisionTree score and confision matrix. Drawing tree based on whether or not plotting
+  * output : Show DecisionTree score and confision matrix. Drawing tree based on whether or not plotting
 
 * #### KNN
 
@@ -51,7 +51,7 @@ It focused on easy and fast use by modularization from data preprocessing to mod
    * test_size (type: Float, default: 0.25) >> Specify testset ratio when training_test_split
    * shuffle (type: Bool, default: False) >> Specify whether shuffle when training_test_split
    * k (type: Int, default: 3) >> Specify a value for n_neighbors in KNN
-    output : Show KNN score evaluated by cross_validation=5 and confision matrix
+  * output : Show KNN score evaluated by cross_validation=5 and confision matrix
 
 * #### LinearReg
 
@@ -60,4 +60,4 @@ It focused on easy and fast use by modularization from data preprocessing to mod
    * target (type: String) >> Feature name of target value
    * test_size (type: Float, default: 0.25) >> Specify testset ratio when training_test_split
    * shuffle (type: Bool, default: False) >> Specify whether shuffle when training_test_split
-    output : Show regression score
+  * output : Show regression score
